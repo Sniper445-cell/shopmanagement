@@ -1,0 +1,17 @@
+{% extends 'myshopmanage/main.html' %}
+{% load static %}
+{% block content %}
+    <div class="row">
+        	{% for shopmanager in shopmanagers %}
+        	<div class="col-lg-4">
+        		<img class=" thumbnail" src="{{shopmanager.imageURL}}">
+	        		 <div class="box-element">
+	        		 		<h4><strong>{{shopmanager.name}}</strong></h4>
+	        		 		<h4><strong>{{shopmanager.address}}</strong></h4>
+	        		 		<button>ကိုယ္ေရးအခ်က္အလက္ၾကည့္ရန္</button>
+	        		 		<!--<a class="btn btn-outline-success" href="#">ၾကည့္ရွု႕ရန္</a>-->
+	        		 </div>
+        	</div>
+        	{% endfor %}
+    </div>
+{% endblock content %}

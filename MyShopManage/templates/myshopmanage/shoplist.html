@@ -1,0 +1,18 @@
+{% extends 'myshopmanage/main.html' %}
+{% load static %}
+{% block content %}
+        <div class="row">
+        	{% for shoplist in shoplists %}
+        	<div class="col-lg-4 col-sm-8 col-md-2">
+        		<img class=" thumbnail" src="{{shoplist.imageURL}}">
+                		 <div class="box-element">
+                		 		<h6><strong>{{shoplist.name}}</strong></h6>
+                		 		<h4><strong>{{shoplist.address}}</strong></h4>
+                		 		<button >ဆိုင္အခ်က္အလက္မ်ား</button>
+                		 		<!--<a class="btn btn-outline-success" href="#">ၾကည့္ရွု႕ရန္</a>-->
+                		 </div>
+        	</div>
+        	{% endfor %}
+        </div>
+
+{% endblock content %}
